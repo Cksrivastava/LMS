@@ -1,0 +1,12 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+<h2>Pay Fine</h2>
+<form method="post">
+    {% csrf_token %}
+    <p>Fine to be paid: ${{ fine_amount }}</p>
+    <label for="paid_fine">Paid:</label>
+    <input type="checkbox" name="paid_fine" id="paid_fine">
+    <button type="submit">Confirm Payment</button>
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'add_book' %}">Add Book</a></li>
+                <li><a href="{% url 'add_member' %}">Add Member</a></li>
+                <li><a href="{% url 'issue_book' %}">Issue Book</a></li>
+                <li><a href="{% url 'return_book' %}">Return Book</a></li>
+                <li><a href="{% url 'pay_fine' %}">Pay Fine</a></li>
+                <li><a href="{% url 'update_membership' %}">Update Membership</a></li>
+                <li><a href="{% url 'user_management' %}">User Management</a></li>
+                <li><a href="{% url 'login' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

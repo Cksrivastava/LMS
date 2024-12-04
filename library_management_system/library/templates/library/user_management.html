@@ -1,0 +1,17 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+<h2>User Management</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="new_user">New User</label>
+    <input type="radio" name="user_type" value="new" checked>
+    <label for="existing_user">Existing User</label>
+    <input type="radio" name="user_type" value="existing">
+    
+    <div id="user_form">
+        {{ form.as_p }}
+    </div>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
